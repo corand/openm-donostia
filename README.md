@@ -3,7 +3,7 @@
 You need git to clone this repository. You can get git from
 [http://git-scm.com/](http://git-scm.com/).
 
-### Clone angular-seed
+### Clone Repository
 
 Clone this repository using [git][git]:
 
