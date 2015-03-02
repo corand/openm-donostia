@@ -1,0 +1,55 @@
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-12">
+			<h1>Predicción para Donostia cada 3 Horas:</h1>
+		</div
+			
+		<div class="row">
+			<div class="col-md-2 tresdias" ng-repeat="hour in data.list">
+				<p>
+					<b>Hora: </b> {{ hour.dt_txt }}
+				</p>
+				<p>
+					<b>Resumen: </b> {{ hour.weather.0.description }}
+				</p>
+				<p>
+					<b> </b> <img src="http://openweathermap.org/img/w/{{hour.weather.0.icon}}.png" alt="">
+				</p>
+
+				<p>
+					<b>Temperatura: </b> {{hour.main.temp}}ºC
+				</p>
+
+				<p>
+					<b>Humedad: </b> {{ hour.main.humidity }}%
+				</p>
+
+				<p>
+					<b>Presión: </b> {{ hour.main.pressure }} hPa
+				</p>
+
+				<p>
+					<b>Nubes: </b> {{hour.clouds.all}}%
+				</p>
+
+
+				<p>
+					<b>Lluvia: </b> {{hour.rain.3h}}
+				</p>
+
+
+
+				<p>
+					<b>Viento: </b>
+					<ul>
+						<li><b>Velocidad: </b> {{hour.wind.speed}}</li>
+						<li><b>Dirección: </b> {{hour.wind.deg}}º
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+
+</div>

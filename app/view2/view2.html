@@ -1,0 +1,50 @@
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-12">
+			<h1>Condiciones actuales Donostia:</h1>
+
+			<p>
+				<b>Resumen: </b> {{ data.weather.0.description }}
+			</p>
+			<p>
+				<b> </b> <img src="http://openweathermap.org/img/w/{{data.weather.0.icon}}.png" alt="">
+			</p>
+
+			<p>
+				<b>Temperatura: </b> {{data.main.temp}}ºC
+			</p>
+
+			<p>
+				<b>Humedad: </b> {{ data.main.humidity }}%
+			</p>
+
+			<p>
+				<b>Presión: </b> {{ data.main.pressure }} hPa
+			</p>
+
+			<p>
+				<b>Nubes: </b> {{data.clouds.all}}%
+			</p>
+
+
+			<p>
+				<b>Lluvia: </b> {{data.rain.3h}}
+			</p>
+
+
+
+			<p>
+				<b>Viento: </b>
+				<ul>
+					<li><b>Velocidad: </b> {{data.wind.speed}}</li>
+					<li><b>Dirección: </b> {{data.wind.deg}}º
+				</ul>
+			</p>
+
+
+		</div>
+	</div>
+
+</div>

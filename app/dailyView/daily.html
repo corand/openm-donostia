@@ -1,0 +1,62 @@
+<div class="container">
+
+	<div class="row">
+
+		<div class="col-md-12">
+			<h1>Predicción diaria para Donostia</h1>
+		</div
+			
+		<div class="row">
+			<div class="col-md-2 diario" ng-repeat="day in data.list">
+				<p>
+					<b>Hora: </b> {{ day.dt * 1000 | date:'medium' }}
+				</p>
+				<p>
+					<b>Resumen: </b> {{ day.weather.0.description }}
+				</p>
+				<p>
+					<b> </b> <img src="http://openweathermap.org/img/w/{{day.weather.0.icon}}.png" alt="">
+				</p>
+
+				<p>
+					<b>Temperatura: </b> 
+						<ul>
+							<li><b>Temperatura:</b> {{ day.temp.day }}</li>
+							<li><b>Máxima:</b> {{ day.temp.max }}</li>
+							<li><b>Mínima:</b> {{ day.temp.min}}</li>
+							<li><b>Temperatura Matinal:</b> {{day.temp.morn }}</li>
+							<li><b>Temperatura Nocturna:</b> {{ day.temp.night}}</li>
+						</ul>
+				</p>
+
+				<p>
+					<b>Humedad: </b> {{ day.humidity }}%
+				</p>
+
+				<p>
+					<b>Presión: </b> {{ day.pressure }} hPa
+				</p>
+
+				<p>
+					<b>Nubes: </b> {{day.clouds}}%
+				</p>
+
+
+				<p>
+					<b>Lluvia: </b> {{day.rain || 0}}
+				</p>
+
+
+
+				<p>
+					<b>Viento: </b>
+					<ul>
+						<li><b>Velocidad: </b> {{day.speed}}</li>
+						<li><b>Dirección: </b> {{day.deg}}º
+					</ul>
+				</p>
+			</div>
+		</div>
+	</div>
+
+</div>
